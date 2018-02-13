@@ -4,7 +4,7 @@
   "description": "HorribleDownloader is a Downloader for the HorribleSubs Website",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/electron/dist/electron.exe .",
+    "start": "./node_modules/.bin/electron .",
     "dev-server": "webpack-dev-server"
   },
   "repository": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "electron": "^1.8.2",
+    "feedparser": "^2.2.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
