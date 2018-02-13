@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Feed from './feed';
 
 const App = () => (
-    <Navigation />
+    <Feed />
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
