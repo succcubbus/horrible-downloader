@@ -1,6 +1,7 @@
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
+const testIrc = require('./app/irc');
 
 let win;
 
@@ -17,7 +18,9 @@ function createWindow () {
 
     win.on('closed', () => {
         win = null
-    })
+    });
+
+    testIrc();
 }
 
 app.on('ready', createWindow);
