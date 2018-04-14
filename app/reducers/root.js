@@ -1,3 +1,1 @@
-export const root = (state = {}, action) => {
-
-};
+export const root = (state = {}, action) => {};

@@ -1,7 +1,8 @@
 {
   "name": "horrible-downloader",
   "version": "1.0.0",
-  "description": "HorribleDownloader is a Downloader for the HorribleSubs Website",
+  "description":
+    "HorribleDownloader is a Downloader for the HorribleSubs Website",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/electron .",
@@ -30,5 +31,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
   }
 }
