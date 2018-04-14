@@ -13,9 +13,6 @@ module.exports = {
         test: /.*\.js$/,
         include: path.resolve(__dirname, 'app'),
         loader: 'babel-loader',
-        options: {
-          presets: ['env', 'react', 'stage-2'],
-        },
       },
     ],
   },

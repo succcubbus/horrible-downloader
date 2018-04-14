@@ -1,12 +1,12 @@
 {
   "name": "horrible-downloader",
   "version": "1.0.0",
-  "description":
-    "HorribleDownloader is a Downloader for the HorribleSubs Website",
+  "description": "HorribleDownloader is a Downloader for the HorribleSubs Website",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/electron .",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "jest": "^22.4.3",
+    "regenerator-runtime": "^0.11.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
