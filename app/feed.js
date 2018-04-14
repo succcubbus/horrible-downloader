@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FeedParser from 'feedparser';
+import ReleaseParser from './release-parser';
 
 export default class Feed extends Component {
   constructor() {
@@ -13,7 +14,16 @@ export default class Feed extends Component {
   fetchData() {
     const parser = new FeedParser([{}]);
 
-    parser.on('data', data => this.data.push(data));
+    parser.on('data', data => {
+      const release = ReleaseParser.parse(data);
+
+      const containsEpisode =
+        this.data.filter(
+          e => e.series === release.series && e.episode == release.episode,
+        ).length !== 0;
+
+      if (!containsEpisode) this.data.push(release);
+    });
 
     fetch('/feed')
       .then(res => res.text())
@@ -23,7 +33,11 @@ export default class Feed extends Component {
   render() {
     return (
       <ul id="feed">
-        {this.data.map(article => <li key={article.guid}>{article.title}</li>)}
+        {this.data.map(release => (
+          <li key={release.guid}>
+            <strong>{release.series}</strong> - {release.episode}
+          </li>
+        ))}
       </ul>
     );
   }
