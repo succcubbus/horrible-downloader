@@ -19,7 +19,8 @@ export default class ReleaseParser {
       .slice(-1)[0]
       .split('.')[0]
       .split('')
-      .slice(1, -1);
+      .slice(1, -1)
+      .join('');
 
     return new Release(
       article.guid,
