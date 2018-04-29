@@ -1052,9 +1052,9 @@ babel-plugin-jest-hoist@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
 
-babel-plugin-spock@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-spock/-/babel-plugin-spock-0.4.0.tgz#53f633a85341f8ae256d3fabbf80d183009bb48c"
+babel-plugin-spock@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-spock/-/babel-plugin-spock-0.5.0.tgz#8251ac07d950ec2a5218f8b6eacb71a25149a23c"
   dependencies:
     babel-plugin-espower "3.0.0-beta.1"
 
