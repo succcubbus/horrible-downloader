@@ -10,9 +10,9 @@ function buildRssEntry(title) {
 
 test('removes horriblesubs prefix', () => {
   const input = buildRssEntry('[HorribleSubs] Spiritpact S2 - 08 [1080p].mkv');
+  const result = ReleaseParser.parse(input);
 
-  when: const result = ReleaseParser.parse(input);
-  then: !result.series.includes('HorribleSubs');
+  expect: !result.series.includes('HorribleSubs');
 });
 
 test('extracts correct series name', () => {
